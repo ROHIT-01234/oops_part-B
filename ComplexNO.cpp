@@ -108,7 +108,7 @@ int main()
         case 3:
         {
             ++ob;
-            ++ob2:
+            ++ob2;
             ob.get();
             ob2.get();
         }
