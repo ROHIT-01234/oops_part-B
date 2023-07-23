@@ -34,16 +34,16 @@ public:
 complex complex::operator+(complex ob)
 {
     complex temp;
-    temp.real = ob.real + real;
-    temp.imag = ob.imag + imag;
+    temp.real = real + ob.real;
+    temp.imag = imag + ob.imag;
     return temp;
 }
 
 complex complex::operator-(complex ob)
 {
     complex temp;
-    temp.real = ob.real - real;
-    temp.imag = ob.imag - imag;
+    temp.real = real - ob.real;
+    temp.imag = imag - ob.imag;
     return temp;
 }
 
@@ -70,7 +70,7 @@ int main()
 
     cout << "Before operator overloading" << endl;
 
-    complex ob, ob2;
+    complex ob, ob2,o1,o2,o3;
     ob.set(10, 20);
     ob2.set(10, 30);
     ob.get();
@@ -93,22 +93,24 @@ int main()
         {
         case 1:
         {
-            ob = ob + ob2;
-            ob.get();
+            o1 = ob + ob2;
+            o1.get();
         }
         break;
 
         case 2:
         {
-            ob = ob - ob2;
-            ob.get();
+            o2 = ob - ob2;
+            o2.get();
         }
         break;
 
         case 3:
         {
             ++ob;
+            ++ob2:
             ob.get();
+            ob2.get();
         }
         break;
         
