@@ -18,9 +18,9 @@ template <class T>void bubble_sort(T*arr,int n)
             }
         }
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < n; i++)
         {
-            cout << arr[i] << endl;
+            cout << arr[i] << "\t";
         }
 };
 
@@ -30,6 +30,8 @@ int main()
     int arr[4]={3,5,4,2};
     bubble_sort(arr,4);
 
+    cout<<endl;
+    
     float arra[4]={1.1,2.3,0.1,-1.0};
     bubble_sort (arra,4);
 
