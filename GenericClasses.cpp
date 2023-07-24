@@ -30,8 +30,7 @@ public:
             cout << a[i] << " ";
         cout << "\n";
     }
-    template <class X>
-    void bubble(X *items, int count)
+    template <class X> void bubble(X *items, int count)
     {
         register int a, b;
         X t;
@@ -41,20 +40,16 @@ public:
             {
                 if (items[b - 1] > items[b])
                 {
+                    t = items[b - 1];
+                    items[b - 1] = items[b];
+                    items[b] = t;
                 }
             }
-        };
-        
-        {
-
-            t = items[b - 1];
-            items[b - 1] = items[b];
-            items[b] = t;
         }
     }
 };
 
-    int main(){
+  int main(){
     sort<int> intob;
     sort<double> doubleob;
 
